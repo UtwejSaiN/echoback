@@ -65,7 +65,7 @@ try:
         print("4. Enable 'Stereo Mix'")
         print("5. Set it as default recording device")
 
-    print("\n✓ Test complete! You can now run: python -m c3tm.main")
+    print("\n✓ Test complete! You can now run: python -m echoback.main")
 
 except ImportError:
     print("Error: sounddevice not installed!")

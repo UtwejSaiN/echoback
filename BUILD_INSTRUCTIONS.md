@@ -1,4 +1,4 @@
-# C3 Time-Machine - Build Instructions
+# Echoback - Build Instructions
 
 Complete guide to building a distributable Windows executable.
 
@@ -42,7 +42,7 @@ python build_product.py
 
 **What it does:**
 1. ✅ Checks all dependencies
-2. 🎨 Generates `c3_icon.ico` (red circle with C3 text)
+2. 🎨 Generates `echoback_icon.ico` (red circle with C3 text)
 3. 📄 Creates `version_info.txt` (version properties for EXE)
 4. 📜 Creates `c3_manifest.xml` (Windows manifest - no UAC prompt)
 5. 🔨 Runs PyInstaller to bundle everything
@@ -71,7 +71,7 @@ Checking dependencies...
 ✓ All dependencies satisfied
 
 Generating application icon...
-✓ Icon created: c3_icon.ico
+✓ Icon created: echoback_icon.ico
 
 Creating version info file...
 ✓ Created: version_info.txt
@@ -91,8 +91,8 @@ Check the `dist/` folder:
 
 ```
 dist/
-├── C3TimeMachine.exe      ← Main executable (~40-60 MB)
-├── c3_icon.ico            ← Icon file
+├── Echoback.exe      ← Main executable (~40-60 MB)
+├── echoback_icon.ico            ← Icon file
 ├── config/
 │   └── default_config.json
 └── recordings/
@@ -107,7 +107,7 @@ dist/
 
 ```powershell
 cd dist
-.\C3TimeMachine.exe
+.\Echoback.exe
 ```
 
 **What to verify:**
@@ -121,8 +121,8 @@ cd dist
 ### Second Test: Clean Environment
 
 1. Copy `dist/` folder to a different location
-2. Rename to `C3TimeMachine`
-3. Run `C3TimeMachine.exe`
+2. Rename to `Echoback`
+3. Run `Echoback.exe`
 4. Should work without Python installed
 
 ---
@@ -134,13 +134,13 @@ cd dist
 **Pros:** Simple, users can see config and recordings
 
 **Steps:**
-1. Rename `dist/` to `C3TimeMachine`
-2. Zip the entire folder: `C3TimeMachine.zip`
+1. Rename `dist/` to `Echoback`
+2. Zip the entire folder: `Echoback.zip`
 3. Share the ZIP file
 
 **User Instructions:**
 1. Extract ZIP
-2. Run `C3TimeMachine.exe`
+2. Run `Echoback.exe`
 3. Follow first-run setup if prompted
 
 ### Option 2: Installer (Advanced)
@@ -150,17 +150,17 @@ Use a tool like **Inno Setup** to create a proper installer:
 1. Download Inno Setup: https://jrsoftware.org/isinfo.php
 2. Create installer script (`.iss` file)
 3. Bundle the `dist/` contents
-4. Generate `C3TimeMachine_Setup.exe`
+4. Generate `Echoback_Setup.exe`
 
 ---
 
 ## Version Info
 
-When users right-click `C3TimeMachine.exe` → Properties → Details:
+When users right-click `Echoback.exe` → Properties → Details:
 
 ```
 File description: Retroactive meeting audio capture utility
-Product name:     C3 Time-Machine
+Product name:     Echoback
 Product version:  1.0.0
 Copyright:        Copyright © 2026 Utwej Sai Nalluri
 Company:          Utwej Sai Nalluri
@@ -197,7 +197,7 @@ pip install Pillow
 ### Build Succeeds but EXE Crashes
 
 1. **Check for missing DLL:**
-   - Run `C3TimeMachine.exe` from PowerShell
+   - Run `Echoback.exe` from PowerShell
    - Look for error messages
    - May need to install VC++ Redistributable
 
@@ -235,8 +235,8 @@ Some antivirus programs flag PyInstaller EXEs as suspicious:
 ## File Sizes
 
 **Expected sizes:**
-- `C3TimeMachine.exe`: ~40-60 MB (includes Python runtime, Qt, NumPy)
-- `c3_icon.ico`: ~50 KB
+- `Echoback.exe`: ~40-60 MB (includes Python runtime, Qt, NumPy)
+- `echoback_icon.ico`: ~50 KB
 - ZIP distribution: ~15-25 MB (compressed)
 
 **Why so large?**
@@ -321,15 +321,15 @@ python build_product.py
 
 ### 3. Create ZIP
 ```powershell
-Compress-Archive -Path dist\* -DestinationPath C3TimeMachine_v1.0.0.zip
+Compress-Archive -Path dist\* -DestinationPath Echoback_v1.0.0.zip
 ```
 
 ### 4. Upload to GitHub Releases
 
 1. Go to GitHub → Releases → Draft new release
 2. Choose tag: `v1.0.0`
-3. Title: "C3 Time-Machine v1.0.0"
-4. Upload: `C3TimeMachine_v1.0.0.zip`
+3. Title: "Echoback v1.0.0"
+4. Upload: `Echoback_v1.0.0.zip`
 5. Add release notes
 6. Publish release
 

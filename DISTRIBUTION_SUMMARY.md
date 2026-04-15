@@ -1,4 +1,4 @@
-# C3 Time-Machine - Distribution Package Complete! 🎉
+# Echoback - Distribution Package Complete! 🎉
 
 Complete transformation from development script to distributable Windows product.
 
@@ -25,8 +25,8 @@ python build_product.py
 **Output:**
 ```
 dist/
-├── C3TimeMachine.exe     ← Single-file executable (~40-60 MB)
-├── c3_icon.ico           ← Application icon
+├── Echoback.exe     ← Single-file executable (~40-60 MB)
+├── echoback_icon.ico           ← Application icon
 ├── config/               ← Configuration folder
 │   └── default_config.json
 └── recordings/           ← Where captures are saved
@@ -77,7 +77,7 @@ python generate_icon.py
 ```
 
 **Output:**
-- `c3_icon.ico` - Used by EXE and system tray
+- `echoback_icon.ico` - Used by EXE and system tray
 
 **Visual:**
 ```
@@ -112,12 +112,12 @@ python generate_icon.py
 ```
 System Tray (bottom-right):
 ┌─────────────────────────┐
-│ [🕐] C3 Time-Machine    │
+│ [🕐] Echoback    │
 │ ─────────────────────── │
 │ ▸ Show C3               │
 │ ▸ Hide C3               │
 │ ─────────────────────── │
-│ ▸ About C3 Time-Machine │
+│ ▸ About Echoback │
 │ ─────────────────────── │
 │ ▸ Quit                  │
 └─────────────────────────┘
@@ -131,7 +131,7 @@ System Tray (bottom-right):
 ```python
 __version__ = "1.0.0"
 __author__ = "Utwej Sai Nalluri"
-__app_name__ = "C3 Time-Machine"
+__app_name__ = "Echoback"
 __description__ = "Retroactive meeting audio capture utility"
 __company__ = "Utwej Sai Nalluri"
 __copyright__ = "Copyright © 2026 Utwej Sai Nalluri"
@@ -145,10 +145,10 @@ __copyright__ = "Copyright © 2026 Utwej Sai Nalluri"
 
 **Windows Properties View:**
 ```
-Right-click C3TimeMachine.exe → Properties → Details:
+Right-click Echoback.exe → Properties → Details:
 
 File description: Retroactive meeting audio capture utility
-Product name:     C3 Time-Machine
+Product name:     Echoback
 Product version:  1.0.0
 Company:          Utwej Sai Nalluri
 Developer:        Utwej Sai Nalluri
@@ -177,7 +177,7 @@ Copyright:        Copyright © 2026 Utwej Sai Nalluri
 ## 📂 New Files Created
 
 ```
-c3-time-machine/
+echoback/
 ├── version.py                    ✅ Version information
 ├── generate_icon.py              ✅ Icon generator script
 ├── build_product.py              ✅ Distribution build script
@@ -192,11 +192,11 @@ c3-time-machine/
 
 **Build Artifacts (created by build script):**
 ```
-├── c3_icon.ico                   Generated icon
+├── echoback_icon.ico                   Generated icon
 ├── c3_manifest.xml               Windows manifest
 ├── version_info.txt              PyInstaller version file
 └── dist/                         Final distribution folder
-    └── C3TimeMachine.exe         Ready-to-distribute EXE
+    └── Echoback.exe         Ready-to-distribute EXE
 ```
 
 ---
@@ -209,16 +209,16 @@ c3-time-machine/
 # Copy from WSL2 to Windows
 # From Windows PowerShell:
 cd C:\Users\YourName\Documents
-Copy-Item -Recurse \\wsl$\Ubuntu\home\utwejnalluri\sai-projects\c3-time-machine .
+Copy-Item -Recurse \\wsl$\Ubuntu\home\utwejnalluri\sai-projects\echoback .
 
 # Or from WSL2:
-cp -r /home/utwejnalluri/sai-projects/c3-time-machine /mnt/c/Users/$USER/Documents/
+cp -r /home/utwejnalluri/sai-projects/echoback /mnt/c/Users/$USER/Documents/
 ```
 
 ### Step 2: Install Dependencies
 
 ```powershell
-cd c3-time-machine
+cd echoback
 
 # Create virtual environment
 python -m venv .venv
@@ -253,7 +253,7 @@ Checking dependencies...
 ✓ Pillow
 
 Generating application icon...
-✓ Icon created: c3_icon.ico
+✓ Icon created: echoback_icon.ico
   Sizes: 256x256, 128x128, 64x64, 48x48, 32x32, 16x16
 
 Creating version info file...
@@ -269,21 +269,21 @@ Building executable with PyInstaller...
 ✓ BUILD SUCCESSFUL!
 
 Post-build setup...
-✓ Executable created: dist\C3TimeMachine.exe
+✓ Executable created: dist\Echoback.exe
   Size: 45.23 MB
 ✓ Copied icon to dist/
 ✓ Copied default config
 
 DISTRIBUTION READY!
 
-Executable location: C:\...\dist\C3TimeMachine.exe
+Executable location: C:\...\dist\Echoback.exe
 
 To distribute:
   1. Copy the entire 'dist/' folder
-  2. Rename it to 'C3TimeMachine'
+  2. Rename it to 'Echoback'
   3. Zip it or share the folder
 
-Users can run: C3TimeMachine.exe
+Users can run: Echoback.exe
 No Python installation required!
 ```
 
@@ -291,7 +291,7 @@ No Python installation required!
 
 ```powershell
 cd dist
-.\C3TimeMachine.exe
+.\Echoback.exe
 ```
 
 **What to verify:**
@@ -308,12 +308,12 @@ cd dist
 
 ```powershell
 # Rename dist folder
-Rename-Item dist C3TimeMachine
+Rename-Item dist Echoback
 
 # Create ZIP
-Compress-Archive -Path C3TimeMachine -DestinationPath C3TimeMachine_v1.0.0.zip
+Compress-Archive -Path Echoback -DestinationPath Echoback_v1.0.0.zip
 
-# Result: C3TimeMachine_v1.0.0.zip (~15-25 MB compressed)
+# Result: Echoback_v1.0.0.zip (~15-25 MB compressed)
 ```
 
 ---
@@ -322,10 +322,10 @@ Compress-Archive -Path C3TimeMachine -DestinationPath C3TimeMachine_v1.0.0.zip
 
 **What users receive:**
 ```
-C3TimeMachine_v1.0.0.zip
-└── C3TimeMachine/
-    ├── C3TimeMachine.exe         Main application
-    ├── c3_icon.ico               Icon (used by app)
+Echoback_v1.0.0.zip
+└── Echoback/
+    ├── Echoback.exe         Main application
+    ├── echoback_icon.ico               Icon (used by app)
     ├── config/
     │   └── default_config.json   Default settings
     └── recordings/               Empty folder (for captures)
@@ -342,7 +342,7 @@ C3TimeMachine_v1.0.0.zip
 ### First Launch
 
 1. User extracts ZIP
-2. Runs `C3TimeMachine.exe`
+2. Runs `Echoback.exe`
 3. If Stereo Mix not detected: Dialog appears with instructions
 4. User follows instructions, restarts
 5. App starts recording
@@ -384,10 +384,10 @@ python build_product.py
 
 ### Change Icon
 
-Replace `c3_icon.ico` with your own (before building):
+Replace `echoback_icon.ico` with your own (before building):
 ```powershell
 # Your custom icon.ico
-Copy-Item MyIcon.ico c3_icon.ico
+Copy-Item MyIcon.ico echoback_icon.ico
 
 # Build
 python build_product.py
@@ -564,4 +564,4 @@ Before distributing v1.0.0:
 
 ---
 
-**You're now ready to distribute C3 Time-Machine as a professional Windows application! 🚀**
+**You're now ready to distribute Echoback as a professional Windows application! 🚀**

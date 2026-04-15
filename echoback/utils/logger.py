@@ -5,7 +5,7 @@ def setup_logging(level=logging.INFO):
     """Configure logging for application"""
 
     # Create logger
-    logger = logging.getLogger('c3tm')
+    logger = logging.getLogger('echoback')
     logger.setLevel(level)
 
     # Console handler

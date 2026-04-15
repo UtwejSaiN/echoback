@@ -3,12 +3,12 @@ from pathlib import Path
 from PyQt6.QtWidgets import QApplication, QMessageBox, QSystemTrayIcon, QMenu
 from PyQt6.QtGui import QIcon, QAction
 from PyQt6.QtCore import Qt
-from c3tm.audio.buffer import CircularAudioBuffer
-from c3tm.audio.recorder import AudioRecorder
-from c3tm.audio.saver import SaveManager
-from c3tm.ui.pill import PillWidget
-from c3tm.utils.logger import setup_logging
-from c3tm.utils.config import load_config
+from echoback.audio.buffer import CircularAudioBuffer
+from echoback.audio.recorder import AudioRecorder
+from echoback.audio.saver import SaveManager
+from echoback.ui.pill import PillWidget
+from echoback.utils.logger import setup_logging
+from echoback.utils.config import load_config
 import sounddevice as sd
 
 # Import version info

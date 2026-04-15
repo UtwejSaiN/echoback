@@ -1,11 +1,11 @@
 """
-Version information for C3 Time-Machine
+Version information for Echoback
 """
 
 __version__ = "1.0.0"
 __author__ = "Utwej Sai Nalluri"
-__app_name__ = "C3 Time-Machine"
-__description__ = "Retroactive meeting audio capture utility"
+__app_name__ = "Echoback"
+__description__ = "Retroactive meeting capture - Never miss a moment"
 __company__ = "Utwej Sai Nalluri"
 __copyright__ = "Copyright © 2026 Utwej Sai Nalluri"
 
