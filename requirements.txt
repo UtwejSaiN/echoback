@@ -1,0 +1,19 @@
+# UI Framework
+PyQt6==6.7.0
+
+# Audio (primary approach)
+sounddevice==0.4.7
+numpy==1.26.4
+
+# Audio (alternative if sounddevice doesn't expose WASAPI loopback)
+# PyAudio==0.2.14  # Uncomment if needed for better WASAPI support
+
+# Build/Distribution (optional - only needed for building EXE)
+pyinstaller>=6.0.0
+Pillow>=10.0.0
+
+# Standard library (no install needed):
+# - wave (audio file I/O)
+# - json (config/metadata)
+# - threading (concurrency)
+# - collections (deque for buffer)

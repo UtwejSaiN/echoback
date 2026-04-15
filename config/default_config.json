@@ -1,0 +1,7 @@
+{
+  "buffer_duration": 120,
+  "future_duration": 60,
+  "sample_rate": 16000,
+  "channels": 1,
+  "recordings_dir": "recordings"
+}
