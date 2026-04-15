@@ -8,6 +8,7 @@
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
 
 ---
+<img width="2752" height="1536" alt="Gemini_Generated_Image_j3i6dsj3i6dsj3i6" src="https://github.com/user-attachments/assets/64e2d28a-d048-40e4-8929-55856ff3f564" />
 
 ## ✨ Features
 
